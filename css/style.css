@@ -1,0 +1,109 @@
+/* Universal selector selects elements of any type */
+* {
+    color: red;
+  }
+
+/* Type selector selects elements of the specified type */
+div {
+    color: orange;
+  }
+
+/* Class selector selects elements with the specified class */
+.alert-text {
+    color: yellow;
+  }
+
+/* ID selector selects elements with the specified ID */
+#title {
+    background-color: green;
+  }
+
+/* Group elements together with commas */
+.read,
+.unread {
+  color: white;
+  background-color: black;
+}
+/*
+.read {
+  /* several unique declarations *\/
+}
+.unread {
+  /* several unique declarations *\/
+}
+*/
+
+/* Chain selectors */
+.subsection.header {
+    color: blue;
+}
+.subsection#preview {
+    color: cyan;
+}
+
+/* Descendant combinator */
+/* Mind the space between elements */
+.ancestor .contents {
+    color: purple;
+}
+
+/* Color & Background Color */
+p {
+    /* hex example: */
+    color: #1100ff;
+    background-color: #ff2400;
+    /* rgb example: */
+    color: rgb(100, 0, 127);
+    /* hsl example: */
+    color: hsl(15, 82%, 56%);
+}
+
+/* Typography */
+p {
+    font-family: "Arial", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Image Resizing */
+img {
+    width: 100px;
+    /* Use `auto` to keep the proportions */
+    height: auto;
+}
+
+/* css declarations precedence ranking: inline > ID > class > type */
+/* Rule 2 takes precedence with more class selctors*/
+/* rule 1 */
+.subsection {
+    color: blue;
+}
+/* rule 2 */
+.main .list {
+    color: red;
+}
+/* Rule 1 takes precedence since ID > class*/
+/* rule 1 */
+#subsection {
+    color: blue;
+}
+/* rule 2 */
+.main .list {
+    color: red;
+}
+/* color = red, but background-color = yellow since it has no conflicts */
+/* rule 1 */
+#subsection .list {
+    background-color: yellow;
+    color: blue;
+}
+/* rule 2 */
+#subsection .main .list {
+    color: red;
+}
+
+/* Unless directly targeting an element, typography based properties are inherited */
+/* While most others are not */
+/* If otherwise equal, the last one in the chain takes precedence */

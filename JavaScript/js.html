@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add7(a) {
+            return a + 7;
+        }
+        console.log(add7(3));
+
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+        console.log(capitalize('hello'));
+
+        function lastLetter(str) {
+            return str.charAt(str.length - 1);
+        }
+        console.log(lastLetter('hello'));
+
+        function playRound(playerSelection, computerselection) {
+            if (playerSelection === computerselection) {
+                return 'Draw';
+            } else if (playerSelection === 'rock') {
+                if (computerselection === 'paper') {
+                    return 'Computer wins';
+                } else {
+                    return 'Player wins';
+                }
+            } else if (playerSelection === 'paper') {
+                if (computerselection === 'scissors') {
+                    return 'Computer wins';
+                } else {
+                    return 'Player wins';
+                }
+            } else if (playerSelection === 'scissors') {
+                if (computerselection === 'rock') {
+                    return 'Computer wins';
+                } else {
+                    return 'Player wins';
+                }
+            }
+        }
+
+        selections = ['rock', 'paper', 'scissors'];
+        for (let i = 0; i < 5; i++) {
+            const computerselection = selections[Math.floor(Math.random() * 3)];
+            const playerSelection = prompt('Rock, paper or scissors?').toLowerCase();
+            console.log(playRound(playerSelection, computerselection));
+        }
+    </script>
+</html>
