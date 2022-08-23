@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Animals table</h1>
+
+    <table>
+        <caption>Testing Table Header</caption>
+        <colgroup>
+            <col width="100px">
+            <col style="background-color: maroon;">
+        </colgroup>
+        <thead id="head">
+            <tr>
+                <th colspan="2">Animals</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- "scope" tells screenreaders if it's a row or col header-->
+                <th colspan="2" scope="col">Hippopotamus</th>
+            </tr>
+            <tr>
+                <th rowspan="2" style="background-color: cyan;" scope="row">Horse</th>
+                <td>Mare</td>
+            </tr>
+            <tr>
+                <td>Stallion</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">Crocodile</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Chicken</th>
+                <td>Hen</td>
+            </tr>
+            <tr>
+                <td>Rooster</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
