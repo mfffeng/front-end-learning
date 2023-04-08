@@ -27,9 +27,10 @@ div {
 
 .flex-container {
     display: flex;
+    gap: 9px;
     /* Defines the main axis of the flex container */
     /* flex-direction: row | row-reverse | column | column-reverse; */
-    flex-direction: column;
+    flex-direction: row;
     /* `flex-basis` refers to height in column mode, width in row mode */
 }
 
@@ -40,14 +41,15 @@ div {
     background: peachpuff;
     border: 4px solid brown;
     height: 100px;
+    width: 100px;
     /* Shorthand for `flex-grow: 1` */
     /* flex: 1; */
     /* flex: flex-grow | flex-shrink | flex-basis; */
 
     /* `flex-shrink` defines the ability for an item to shrink if the space is not enough */
-    /* Uncommment the following line, and 1 & 3 will shrink, while 2 stays at the same size */
+    /* Uncomment the following line, and 1 & 3 will shrink, while 2 stays at the same size */
     /* width: 250px; */
-    flex: 1 1 0;
+    flex: 3 0 0;
     /* Empty div has a height of 0px, so if we set `flex-basis` to 0 and remove the div style */
     /* on top of this file, the container won't show */
     /* anyting (as the initial heights of the boxes are 0 and the div also has a height of 0) */
@@ -60,14 +62,15 @@ div {
     background: peachpuff;
     border: 4px solid brown;
     height: 100px;
+    width: 100px;
     /* `flex-basis` defines the initial size of the item */
     /* Defaults to auto, but turns to 0%  if `flex` is set */
     /* Have to change back to `auto`, otherwise it would shrink evenly and ignore `flex-shrink` */
-    flex: 2 1 0;
+    flex: 1 0 0;
 }
 
 
-/* Alignmrnt Techniques */
+/* Alignment Techniques */
 .container {
     height: 140px;
     padding: 16px;
@@ -80,7 +83,8 @@ div {
     /* `align-items` defines the alignment of the items along the cross axis */
     align-items: center;
     /* Add gaps between items */
-    gap: 8px;
+    /* gap: 8px; */
+    white-space: nowrap;
 }
   
 .item {
@@ -89,4 +93,15 @@ div {
     border: 4px solid darkslategray;
     background: skyblue;
     /* flex: 1; */
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+/* Select the iterm with id 2 */
+#two{
+    background: lightgreen;
+    text-overflow: ellipsis;
+    /* text color */
+    color: black;
+    overflow: scroll;
+    overflow-y: hidden;
 }
