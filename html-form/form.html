@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="greet.js" defer></script>
+</head>
+
+<body>
+    <form action="example.com/path" method="post">
+        <label for="name1">Name</label>
+        <input type="text" name="name1" id="nameq" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <label for="name">Name (no form)</label>
+    <input type="text" name="name" id="name" placeholder="Enter your name">
+    <!-- <button type="submit">Submit</button> -->
+    <button class="submit"> Greet me </button>
+    <h1 class="greeting"></h1>
+
+    <!-- The email type would display a special keyboard with `@` on mobile keyboards -->
+    <input type="email" name="email" id="email" placeholder="Enter your email">
+    <input type="password" name="password" id="password" placeholder="Enter your password">    
+    <input type="number" name="age" id="age" placeholder="Enter your age">
+    <input type="date" name="date" id="date" placeholder="Enter your date">
+    <textarea rows="20", cols="60"> Some text </textarea>
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    <select name="fashion" id="fashion" multiple>
+        <optgroup label="Shirts">
+            <option value="tshirt">T-Shirt</option>
+            <option value="shirt">Shirt</option>
+        </optgroup>
+        <optgroup label="Pants">
+            <option value="jeans">Jeans</option>
+            <option value="trousers">Trousers</option>
+        </optgroup>
+    </select>
+    <h1>Ticket Type</h1>
+    <!-- Buttons with the same name forms a group -->
+    <div>
+        <input type="radio" name="ticket" id="ticket" value="one-way">
+        <label for="one-way">One Way</label>
+    </div>
+    <div>
+        <input type="radio" name="ticket" id="ticket" value="round-trip">
+        <label for="round-trip">Round Trip</label>
+    </div>
+    <h1>Pizza Topping</h1>
+    <div>
+        <input type="checkbox" name="topping" id="topping" value="pepperoni" checked>
+        <label for="pepperoni">Pepperoni</label>
+    </div>
+    <div>
+        <input type="checkbox" name="topping" id="topping" value="mushroom">
+        <label for="mushroom">Mushroom</label>
+    </div>
+
+    <fieldset>
+        <legend>What would you like to drink?</legend>
+      
+        <div>
+          <input type="radio" name="drink" id="coffee" value="coffee">
+          <label for="coffee">Coffee</label>
+        </div>
+      
+        <div>
+          <input type="radio" name="drink" id="tea" value="tea">
+          <label for="tea">Tea</label>
+        </div>
+      
+        <div>
+          <input type="radio" name="drink" id="soda" value="soda">
+          <label for="soda">Soda</label>
+        </div>
+      
+      </fieldset>
+</body>
+
+</html>
